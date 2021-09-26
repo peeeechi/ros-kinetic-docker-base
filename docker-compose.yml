@@ -1,0 +1,14 @@
+version: "3"
+services:
+  ros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: my-image/ros:kinetic
+    volumes:
+      - ./catkin_ws:/home/rosuser/catkin_ws/:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    tty: true
+    env_file:
+      - .env/ros-env
+
