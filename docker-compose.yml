@@ -3,8 +3,8 @@ services:
   ros:
     build:
       context: .
-      dockerfile: Dockerfile
-    # image: my-image/ros:kinetic
+      # dockerfile: Dockerfile
+    image: my-image/ros:kinetic
     volumes:
       - ./catkin_ws:/home/rosuser/catkin_ws/:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
